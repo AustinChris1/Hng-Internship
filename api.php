@@ -23,7 +23,7 @@ $response = [
 ];
 
 // Return the response
-echo json_encode($response, JSON_PRETTY_PRINT);
+echo json_encode($response, JSON_UNESCAPED_SLASHES);
 ?>
 
 
