@@ -17,13 +17,13 @@ $response = [
     'current_day' => $current_day,
     'utc_time' => $current_utc_time,
     'track' => $track,
-    'github_file_url' => 'https://github.com/username/repo/blob/main/file_name.ext',
-    'github_repo_url' => 'https://github.com/username/repo',
+    'github_file_url' => 'https://github.com/AustinChris1/Hng-Internship/blob/main/api.php',
+    'github_repo_url' => 'https://github.com/AustinChris1/Hng-Internship',
     'status_code' => 200
 ];
 
 // Return the response
-echo json_encode($response, JSON_PRETTY_PRINT);
+echo json_encode($response, JSON_UNESCAPED_SLASHES);
 ?>
 
 
