@@ -26,6 +26,8 @@ switch ($method) {
             while ($row = $result->fetch_assoc()) {
                 $data[] = $row;
             }
+        }else{
+            echo "No user found";
         }
         echo json_encode($data);
         break;
@@ -40,26 +42,8 @@ switch ($method) {
             $name = $db->real_escape_string($name);
         }
 
-        if (isset($data->age)) {
-            $age = $data->age;
-            $age = htmlentities($age);
-            $age = strip_tags($age);
-            $age = (int)$db->real_escape_string($age);
-        }
 
-        if (isset($data->email)) {
-            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                echo "Invalid email format";
-                exit();
-            }
-            $email = $data->email;
-            $email = htmlentities($email);
-            $email = strip_tags($email);
-            $email = $db->real_escape_string($email);
-        }
-
-
-        $sql = $db->query("INSERT INTO persons (name, age, email) VALUES ('$name', $age, '$email')");
+        $sql = $db->query("INSERT INTO persons (name) VALUES ('$name')");
         if ($sql === TRUE) {
             $id = $db->insert_id;
             echo "Person created successfully with id " . $id;
@@ -82,25 +66,6 @@ switch ($method) {
             $query = $query . ", name = '$name'";
         }
 
-        if (isset($data->age)) {
-            $age = $data->age;
-            $age = htmlentities($age);
-            $age = strip_tags($age);
-            $age = (int)$db->real_escape_string($age);
-            $query = $query . ", age = $age";
-        }
-
-        if (isset($data->email)) {
-            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                echo "Invalid email format";
-                exit();
-            }
-            $email = $data->email;
-            $email = htmlentities($email);
-            $email = strip_tags($email);
-            $email = $db->real_escape_string($email);
-            $query = $query . ", email = '$email'";
-        }
 
 
         $sql = $db->query("UPDATE persons SET $query WHERE id = '$id'");
