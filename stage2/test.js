@@ -15,7 +15,7 @@ async function create() {
     console.log("Creating user \n")
     const value = await input({ message: `Enter the name: ` })
 
-    const res = await fetch("http://localhost/hng-internship/stage2/", {
+    const res = await fetch("https://austinchris-hng-internship.000webhostapp.com/api", {
         method: "POST",
         body: JSON.stringify({ name: value }),
     });
@@ -28,7 +28,7 @@ async function create() {
 async function read() {
     console.log("Reading user \n")
     const id = await input({ message: `Enter the ID of the user: ` })
-    const res = await fetch(`http://localhost/hng-internship/stage2/?id=${id}`, {
+    const res = await fetch(`https://austinchris-hng-internship.000webhostapp.com/api?id=${id}`, {
         method: "GET",
     });
     const text = await res.text();
@@ -43,7 +43,7 @@ async function update() {
     const id = await input({ message: `Enter the id of the user you want to update: \n` })
         const value = await input({ message: `Enter the new name of the user: ` })
 
-    const res = await fetch("http://localhost/hng-internship/stage2/", {
+    const res = await fetch("https://austinchris-hng-internship.000webhostapp.com/api", {
         method: "PUT",
         body: JSON.stringify({ id, name: value }),
     });
@@ -57,7 +57,7 @@ async function update() {
 async function delete_user() {
     console.log("Delete user \n")
     const id = await input({ message: `Enter the id of the user you want to delete: ` })
-    const res = await fetch(`http://localhost/hng-internship/stage2/?id=${id}`, {
+    const res = await fetch(`https://austinchris-hng-internship.000webhostapp.com/api?id=${id}`, {
         method: "DELETE",
     });
     const text = await res.text();

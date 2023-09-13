@@ -35,10 +35,10 @@ Here's an example of how to run the script:
 
 ## Image Examples
 
-- 1st
-[!img](./1stExample.png)
 
-[!img](./2ndExample.png)
+![img](./1stExample.png)
+
+![img](./2ndExample.png)
 
 
 
