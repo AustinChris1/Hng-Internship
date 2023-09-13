@@ -113,4 +113,8 @@ Execute the script using Node.js:
   ```
   node test.js
   ```
+## UML Diagram
+
+![img](./umlDiagram.png)
+
 - You can find more documentation on the testing [here](https://github.com/AustinChris1/Hng-Internship/blob/main/stage2/Documentation.md)

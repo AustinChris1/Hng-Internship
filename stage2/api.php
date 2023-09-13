@@ -3,8 +3,8 @@
 require_once("db.php");
 
 // Set headers to allow cross-origin requests (CORS)
-header("Access-Control-Allow-Origin: *");
-header("Content-Type: application/json; charset=UTF-8");
+//header("Access-Control-Allow-Origin: *");
+//header("Content-Type: application/json; charset=UTF-8");
 
 // Define HTTP methods
 $method = $_SERVER["REQUEST_METHOD"];
