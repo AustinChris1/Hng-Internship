@@ -21,7 +21,7 @@ Database configuration is handled in `db.php`. Ensure that the database credenti
 
 ### Request and Response Formats
 
-#### GET api/person
+#### GET api/
 
 - **Request**: No request body required.
 - **Response**: Returns JSON data containing person details. Example:
@@ -34,7 +34,7 @@ Database configuration is handled in `db.php`. Ensure that the database credenti
     }
   ]
   
-#### POST /person
+#### POST api/
 
 - **Request**: Creates a user by sending a JSON object with person details. Example:
 
@@ -44,7 +44,7 @@ Database configuration is handled in `db.php`. Ensure that the database credenti
     "name": "Alice Smith",
   }
 
-#### PUT /person
+#### PUT api/
 
 - **Request**: Updates a user by sending a JSON object with person details. Example:
 
@@ -54,7 +54,7 @@ Database configuration is handled in `db.php`. Ensure that the database credenti
   "name": "Updated Name",
     }
 
-#### DELETE /person
+#### DELETE api/
 
 - **Request**: Deletes a user by sending a JSON object with person details. Example:
 
@@ -109,7 +109,7 @@ Open your terminal or command prompt.
 
 Execute the script using Node.js:
 
-  Run tests using nodejs by
+Run tests using nodejs by
   ```
   node test.js
   ```
