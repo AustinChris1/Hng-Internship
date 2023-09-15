@@ -2,6 +2,7 @@
 	"dependencies": {
 		"@inquirer/confirm": "^2.0.12",
 		"@inquirer/input": "^1.2.11",
-		"@inquirer/select": "^1.2.11"
+		"@inquirer/select": "^1.2.11",
+		"figlet": "^1.6.0"
 	}
 }

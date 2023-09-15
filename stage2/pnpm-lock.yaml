@@ -4,11 +4,13 @@ specifiers:
   '@inquirer/confirm': ^2.0.12
   '@inquirer/input': ^1.2.11
   '@inquirer/select': ^1.2.11
+  figlet: ^1.6.0
 
 dependencies:
   '@inquirer/confirm': 2.0.12
   '@inquirer/input': 1.2.11
   '@inquirer/select': 1.2.11
+  figlet: 1.6.0
 
 packages:
 
@@ -135,6 +137,12 @@ packages:
   /escape-string-regexp/1.0.5:
     resolution: {integrity: sha512-vbRorB5FUQWvla16U8R/qgaFIya2qGzwDrNmCZuYKrbdSUMG6I1ZCGQRefkRVhuOkIGVne7BQ35DSfo1qvJqFg==}
     engines: {node: '>=0.8.0'}
+    dev: false
+
+  /figlet/1.6.0:
+    resolution: {integrity: sha512-31EQGhCEITv6+hi2ORRPyn3bulaV9Fl4xOdR169cBzH/n1UqcxsiSB/noo6SJdD7Kfb1Ljit+IgR1USvF/XbdA==}
+    engines: {node: '>= 0.4.0'}
+    hasBin: true
     dev: false
 
   /figures/3.2.0:
