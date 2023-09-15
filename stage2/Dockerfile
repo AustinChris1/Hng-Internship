@@ -2,7 +2,7 @@ FROM debian:latest
 
 WORKDIR /usr/src/myapp
 
-RUN apt update && apt-get install php php-mysql
+RUN apt update -y && apt-get install php php-mysql -y
 
 COPY . .
 
